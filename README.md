@@ -1,1 +1,1 @@
-# Pythonisti_anonimi
+# Pythonisti anonimi

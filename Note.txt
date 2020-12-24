@@ -1,0 +1,4 @@
+In cmd Posizionarsi nella directory di backup e lanciare il comando:
+mongorestore -d Guarda_che_freddo ./
+
+
