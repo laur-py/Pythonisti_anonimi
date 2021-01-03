@@ -1,4 +1,4 @@
-#PROGETTO 4: GUARDA CHE FREDDO!
+# PROGETTO "GUARDA CHE FREDDO!"
 
 ## Sommario
 1. [Informazioni_generali](#informazioni_generali)
