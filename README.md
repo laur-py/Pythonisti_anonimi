@@ -1,4 +1,4 @@
-<p align="center"> PROGETTO 4: GUARDA CHE FREDDO </p)
+#PROGETTO 4: GUARDA CHE FREDDO!
 
 ## Sommario
 1. [Informazioni_generali](#informazioni_generali)
