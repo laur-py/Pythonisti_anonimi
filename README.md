@@ -14,7 +14,7 @@ La collezione di file è completamente basata su dati che riportano le varie tem
 
 La fonte delle informazioni ivi contenute è Berkeley Earth (per maggiori informazioni sull'organizzazione che ha raccolto i dati utilizzati, clicca [qui](http://berkeleyearth.org/archive/about/) ).
 
-Il programma è scritto nella sua quasi totalità in linguaggio Python, ad eccezione di una parte in linguaggio NoSQL che serve in maniera esclusiva per importare nel notebook Jupiter le informazioni dei dataset.
+Il programma è scritto nella sua quasi totalità in linguaggio Python, ad eccezione di una parte in linguaggio NoSQL che serve per importare nel notebook Jupiter le informazioni dei dataset e per compiere query necessarie all'analisi approfondita.
 
 Come anticipato, l'analisi si è basata su due dei cinque dataset contenuti nel link sopra indicato:
 
@@ -24,14 +24,14 @@ Come anticipato, l'analisi si è basata su due dei cinque dataset contenuti nel 
 Il primo file .csv, è focalizzato sulle rilevazioni di temperatura nelle maggiori città del mondo; il secondo, invece, focalizza la sua attenzione sugli Stati mondiali.
 
 
-Usando i dati contenuti nei suddetti dataset, il progetto parte dall'analisi statistica di tutte le rilevazioni, fornisce una visualizzazione grafica del variare delle temperature nel tempo (per una corretta visualizzazione, scaricare i file contenuti in questo [link]( https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip ) ) ed evidenzia le città in cui si sono registrate le maggiori escursioni termiche nei diversi periodi storici.
+Usando i dati contenuti nei suddetti dataset, il progetto parte dall'analisi statistica di tutte le rilevazioni, crea due collection contenenti i dati senza outliers e valori nulli, fornisce una visualizzazione grafica del variare delle temperature nel tempo (per una corretta visualizzazione, scaricare i file contenuti in questo [link]( https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip ) ) ed evidenzia le città in cui si sono registrate le maggiori escursioni termiche nei diversi periodi storici.
 
-Infine, il programma contiene un algoritmo creato per trovare il viaggio che un ipotetico viaggiatore dovrebbe intraprendere per spostarsi da Pechino a Los Angeles, muovendosi tappa dopo tappa verso la città più calda fra le tre a lui più vicine.
+Infine, il programma contiene un algoritmo creato per trovare il viaggio che un ipotetico viaggiatore dovrebbe intraprendere per spostarsi da Pechino a Los Angeles, muovendosi tappa dopo tappa verso la città più calda fra le tre a lui più vicine. Per chiarezza, i vari step del viaggio sono inseriti in un dataframe e poi mostrati in una mappa mondiale (dotata di uno slider che, permettendo di variare l'anno del viaggio, mostra anche direttamente sulla mappa il miglior percorso a seconda dell'anno scelto).
 ***
 
 ## Installazione
 ***
-L'utilizzo dello script Jupiter richiede l'installazione di numerose librerie esterne di Python. 
+L'utilizzo dei 3 scripts Jupiter richiede l'installazione di numerose librerie esterne di Python. 
 L'installazione è eseguibile su Windows, Linux e Mac. 
 Chiaramente, il primo passo indispensabile è installare [Python 3.9](https://www.python.org/downloads/release/python-390/) e la piattaforma di Python [Anaconda](https://www.anaconda.com/products/individual), necessaria per utilizzare il notebook Jupiter.
 
