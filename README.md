@@ -136,7 +136,7 @@ Essenzialmente, il grafico è stato implementato per rendere più piacevole e pi
 1. [General_informations](#general_informations)
 2. [Installation](#installation)
 3. [Description](#description)
-4: [Presentation](#presentation)
+4. [Presentation](#presentation)
 5. [Project_status](#project_status)
 6. [Contributors](#contributors)
 7. [FAQ](#FAQ)
@@ -208,4 +208,24 @@ Alternatively, using the Anaconda Poweshell prompt, the commands to be executed 
 - conda install bokeh
 - conda install shapely
 ```
+***
+
+## Description
+***
+The golas of the project (consisting of 3 different Jupiter files) are:
+* an overview about the changes in temperatures in the world, in different places and during different years;
+* the analysis of the cities with the greatest temperature range over time;
+* the construction of the route for an ipotetycal travel from Beijing/Peking to Los Angeles.
+
+The first part of the project (inserted in the "Exploration_Data" file) starts after the simply download, from the [Kaggle](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data) page, of the datasets which have been used for the entire project. In this first step, in order to be easily usable on Python, the .csv files that enclosed the datasets have been transformed into DataFrames, using the Pandas library. This allowed us to reach the purpose of this part: the analysis, from a statistical point of view, of data. Considering that the climatic data had been obtained with different methods (for example, the oldest temperatures reported had been calculated through the use of archaic mercury thermometers) and considering that the authors of the datasets had underlined the presence of possible anomalies, the aforementioned analysis has been essential to make the whole project more solid. To make easily understandable the various commands, it has been necessary to illustrate the various steps using boxplot and histograms that visibly show the changes made to the data through the various statistical formulas.
+
+After eliminating null values and outliers, the two DataFrames were loaded into a server created specifically on MongoDB, a non-relational DBMS based on the NoSQL language. The generated database was thus equipped with 2 collections: one based on the GlobalLandTemperaturesByCountry.csv file and the other one on the GlobalLandTemperaturesByMajorCity.csv file. The purpose of this superstructure was to have a performing database to complete search queries directly from the program written in Python, integrating the two different programming languages and optimizing the performance of the scripts.
+
+The second part of the project (inserted in the "Graphic_Visualization_and_Analysis" file) is based on am interesting and engaging graphical representations of temperature variations in the world, from 1750 to 2013. It has been decided to show all the temperatures available in the dataset even if, from 1750 to around 1880, there is a great lack of information and certainly less reliable data. This part ends with the analysis of the cities with the greatest temperature excursion in the different historical periods, with a suggestive graph based on a world map that shows the names and the dimension of each variation.
+
+The third and last part of the project (inserted in the "Cold_Traveller" file) is composed by a long algorithm, which considers all the data contained in the MongoDB collection about the temperatures measured in the major cities of the world and which allows to plan a real trip. Specifically, the chosen trip starts from Beijing/Peking (China) and ends in Los Angeles (USA), respecting the following criteria:
+* given the city of departure, the next stop is chosen by analyzing the 3 closest cities to the one where the traveler is;
+* among the 3 closest cities, the traveller moves to the one with a relatively higher temperature.
+
+The point of arrival of this third final part is a graph that shows, using a world map as "background", the journey that would be undertaken if the various stages prescribed by the command would be followed. For a netter comprehension, the various steps of the trip have been inserted in a dataframe and then shown in the aforementioned world map (equipped with a slider which, allowing the reader to vary the year of the travel, shows directly on the map the best route depending on the year chosen).
 ***
