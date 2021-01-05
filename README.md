@@ -166,7 +166,7 @@ At the end, the program contains an algorithm created to find the trip that a hy
 ***
 The use of the 3 Jupiter scripts requires the installation of several external Python libraries.
 The installation is executable on Windows, Linux and Mac.
-Clearly, the essential first step is to install [Python 3.9](https://www.python.org/downloads/release/python-390/) and the Python platform [Anaconda]((https://www.anaconda.com/products/individual)), required to use the Jupiter notebook app.
+Clearly, the essential first step is to install [Python 3.9](https://www.python.org/downloads/release/python-390/) and the Python platform [Anaconda](https://www.anaconda.com/products/individual)), required to use the Jupiter notebook app.
 
 Once these two simple installations are completed, you will need to download a series of libraries.
 
