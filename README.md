@@ -127,9 +127,10 @@ Essenzialmente, il grafico è stato implementato per rendere più piacevole e pi
     1) la temperatura dell'Alaska è stata considerata pari a quella degli altri 49 Stati che compongono gli USA
     2) per alcuni Stati (principalmente africani) non si hanno dati nei cinque file del dataset: essi risultano, sulla mappa, anneriti
     3) nel corso dei secoli, le stazioni di rilevamento della temperatura sono state spostate: ciò significa che alcune variazioni possono essere state causate da questo motivo e non da cambiamenti climatici degni di approfondimento.
+***
 
 
-# Project "LOOK HOW COLD IT IS!"
+# PROJECT "LOOK HOW COLD IT IS!"
 
 ## Table of contents
 1. [General_informations](#general_informations)
@@ -144,7 +145,7 @@ Essenzialmente, il grafico è stato implementato per rendere più piacevole e pi
 The project is entirely based on the analysis of two free datasets available on Kaggle website (to view the datasets, click [here] (https://www.kaggle.com/berkeleyearth/climate-change-earth-surface -temperature-data)) which are a part of a larger source consisting of a total of five files.
 The collection of files is composed by data that report the various temperatures recorded in continents, oceans, nations and cities of the world, from 1750 to 2013.
 
-The source of the informations contained in these Kaggle datasets is Berkeley Earth (for more information about the organization that collected the data used, click [here] (http://berkeleyearth.org/archive/about/)).
+The source of the informations contained in these Kaggle datasets is Berkeley Earth (for more information about the organization that collected the data used, click [here](http://berkeleyearth.org/archive/about/)).
 
 The program is written almost entirely using the Python programming language, with the exception of a part in NoSQL language. NoSQL has been used to import the dataset information into the Jupiter notebook and to perform queries necessary for deeper analysis.
 
@@ -156,7 +157,7 @@ As anticipated, the analysis is based on two of the five datasets contained in t
 The first .csv file is focused on temperature measurements in the major cities of the world; the second one, on the other hand, focuses its attention on world States.
 
 
-Using the data contained in the aforementioned datasets, the project starts from the statistical analysis of all the measurements, it creates two MongoDB collections containing the data without outliers and null values and it provides a graphic display of the temperature variations over time (for a correct visualization of the geographical maps in the last 2 Jupiter scripts, download the files contained in this [link] (https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip)) and highlights the cities where there have been the biggest temperature excursions in different historical periods.
+Using the data contained in the aforementioned datasets, the project starts from the statistical analysis of all the measurements, it creates two MongoDB collections containing the data without outliers and null values and it provides a graphic display of the temperature variations over time (for a correct visualization of the geographical maps in the last 2 Jupiter scripts, download the files contained in this [link](https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip)) and highlights the cities where there have been the biggest temperature excursions in different historical periods.
 
 At the end, the program contains an algorithm created to find the trip that a hypothetical traveler should do to move from Beijing/Peking to Los Angeles, moving stage by stage to the hottest city among the three closest to him.
 ***
@@ -165,7 +166,7 @@ At the end, the program contains an algorithm created to find the trip that a hy
 ***
 The use of the 3 Jupiter scripts requires the installation of several external Python libraries.
 The installation is executable on Windows, Linux and Mac.
-Clearly, the essential first step is to install [Python 3.9] (https://www.python.org/downloads/release/python-390/) and the Python platform [Anaconda] ((https://www.anaconda.com/products/individual)), required to use the Jupiter notebook app.
+Clearly, the essential first step is to install [Python 3.9](https://www.python.org/downloads/release/python-390/) and the Python platform [Anaconda]((https://www.anaconda.com/products/individual)), required to use the Jupiter notebook app.
 
 Once these two simple installations are completed, you will need to download a series of libraries.
 
@@ -189,3 +190,22 @@ Using the command prompt, you will need to run the following commands:
 - pip install bokeh
 - pip install shapely
 ```
+Alternatively, using the Anaconda Poweshell prompt, the commands to be executed will be as follows:
+```
+- conda install pandas
+- conda install datetime
+- conda install pymongo
+- conda install dns
+- conda install geopandas
+- conda install matplotlib
+- conda install panel
+- conda install json
+- conda install pycountry
+- conda install math
+- conda install numpy
+- conda install seaborn 
+- conda install calendar
+- conda install bokeh
+- conda install shapely
+```
+***
