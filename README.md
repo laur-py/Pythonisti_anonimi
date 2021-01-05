@@ -142,7 +142,7 @@ Essenzialmente, il grafico è stato implementato per rendere più piacevole e pi
 7. [FAQ](#FAQ)
 ## General_informations
 ***
-The project is entirely based on the analysis of two free datasets available on Kaggle website (to view the datasets, click [here] (https://www.kaggle.com/berkeleyearth/climate-change-earth-surface -temperature-data)) which are a part of a larger source consisting of a total of five files.
+The project is entirely based on the analysis of two free datasets available on Kaggle website (to view the datasets, click [here](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data)) which are a part of a larger source consisting of a total of five files.
 The collection of files is composed by data that report the various temperatures recorded in continents, oceans, nations and cities of the world, from 1750 to 2013.
 
 The source of the informations contained in these Kaggle datasets is Berkeley Earth (for more information about the organization that collected the data used, click [here](http://berkeleyearth.org/archive/about/)).
