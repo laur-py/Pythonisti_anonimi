@@ -103,7 +103,7 @@ Il progetto è stato interamente completato e lo script Python è funzionante.
 
 ## Contributori
 ***
-Sabrina Cenghialta
+[Sabrina Cenghialta](https://github.com/CenghialtaSabrina)
 
 [Laura Romano](https://github.com/laur-py)
 
