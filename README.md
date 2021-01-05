@@ -118,8 +118,7 @@ La decisione di basare l'analisi sui due file chiamati "GlobalLandTemperatureByM
 2. **Perchè si è deciso di svolgere un'analisi statistica in un progetto meramente basato su linguaggi di programmazione?**
 Nel momento in cui si utilizza un dataset contenente centinaia di migliaia di dati, è indispensabile svolgere un'attenta analisi sul dataset stesso onde evitare di utilizzare dati errati o di giungere a conclusioni sbagliate dettate da una carenza di dati in uno specifico dettaglio.
 3. **Il grafico che mostra le temperature mondiali al variare del tempo contiene Stati sempre grigi. Qual è il motivo?**
-Essenzialmente, il grafico è stato implementato per rendere più piacevole e più leggibile l'ampio dataset "GlobalLandTemperatureByCountry" a disposizione. Ci sono alcune discordanze con la realtà ma non è possibile fare altro che prenderne atto, considerando anche le dichiarazioni del creatore dataset stesso:
+Essenzialmente, il grafico è stato implementato per rendere più piacevole e più leggibile l'ampio dataset "GlobalLandTemperatureByCountry" a disposizione. Ci sono alcune discordanze con la realtà ma non è possibile fare altro che prenderne atto, considerando anche le dichiarazioni del creatore del dataset stesso:
     1) la temperatura dell'Alaska è stata considerata pari a quella degli altri 49 Stati che compongono gli USA
-    2) la Groenlandia, in quanto possedimento danese, è stata rappresentata per convenzione con la stessa temperatura della madrepatria
-    3) per alcuni Stati (principalmente africani) non si hanno dati nei cinque file del dataset: essi risultano, sulla mappa, anneriti
-    4) nel corso dei secoli, le stazioni di rilevamento della temperatura sono state spostate: ciò significa che alcune variazioni possono essere state causate da questo motivo e non da cambiamenti climatici degni di approfondimento.
+    2) per alcuni Stati (principalmente africani) non si hanno dati nei cinque file del dataset: essi risultano, sulla mappa, anneriti
+    3) nel corso dei secoli, le stazioni di rilevamento della temperatura sono state spostate: ciò significa che alcune variazioni possono essere state causate da questo motivo e non da cambiamenti climatici degni di approfondimento.
