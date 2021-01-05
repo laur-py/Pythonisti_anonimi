@@ -103,7 +103,7 @@ Il progetto è corredato di una presentazione multimediale (per visualizzarla cl
 ***
 ## Stato_del_progetto
 ***
-Il progetto è stato interamente completato e lo script Python è funzionante.
+Il progetto è stato interamente completato e i 3 script Python sono funzionanti.
 ***
 
 ## Contributori
@@ -119,7 +119,7 @@ Il progetto è stato interamente completato e lo script Python è funzionante.
 ***
 Ecco una lista dei dubbi che potrebbero sorgere ad un attento analizzatore del progetto:
 1. **I dataset disponibili su Kaggle sono cinque ma il progetto ne analizza solo due. Perchè?**
-La decisione di basare l'analisi sui due file chiamati "GlobalLandTemperatureByMajorCity" e "GlobalLandTemperatureByCountry" è stata soppesata e valutata adeguatamente. Sono stati scartati gli altri tre files poichè quello nominato "GlobalLandTemperatureByCity" avrebbe compromesso la funzionalità del database NoSQL e quindi l'intera commistione di linguaggi Python e NoSQL, mentre gli altri due ("GlobalLandTemperatureByState" e "GlobalTemperature" non contengono dati utili nè per analizzare variazioni di temperatura nelle città mondiali, nè per ampliare l'analisi focalizzata sugli Stati.
+La decisione di basare l'analisi sui due file chiamati "GlobalLandTemperatureByMajorCity" e "GlobalLandTemperatureByCountry" è stata soppesata e valutata adeguatamente. Sono stati scartati gli altri tre files poichè quello nominato "GlobalLandTemperatureByCity" avrebbe compromesso la funzionalità del database NoSQL a causa della sua dimensione e quindi l'intera commistione di linguaggi Python e NoSQL, mentre gli altri due ("GlobalLandTemperatureByState" e "GlobalTemperature" non contengono dati utili nè per analizzare variazioni di temperatura nelle città mondiali, nè per ampliare l'analisi focalizzata sugli Stati.
 2. **Perchè si è deciso di svolgere un'analisi statistica in un progetto meramente basato su linguaggi di programmazione?**
 Nel momento in cui si utilizza un dataset contenente centinaia di migliaia di dati, è indispensabile svolgere un'attenta analisi sul dataset stesso onde evitare di utilizzare dati errati o di giungere a conclusioni sbagliate dettate da una carenza di dati in uno specifico dettaglio.
 3. **Il grafico che mostra le temperature mondiali al variare del tempo contiene Stati sempre grigi. Qual è il motivo?**
@@ -228,4 +228,35 @@ The third and last part of the project (inserted in the "Cold_Traveller" file) i
 * among the 3 closest cities, the traveller moves to the one with a relatively higher temperature.
 
 The point of arrival of this third final part is a graph that shows, using a world map as "background", the journey that would be undertaken if the various stages prescribed by the command would be followed. For a netter comprehension, the various steps of the trip have been inserted in a dataframe and then shown in the aforementioned world map (equipped with a slider which, allowing the reader to vary the year of the travel, shows directly on the map the best route depending on the year chosen).
+***
+## Presentation
+***
+The project is equipped with a multimedia presentation (to view it click [here](https://prezi.com/view/3WqkhqPQo5MsAmfh32bI/) created using the Prezi software. It can be used to facilitate the understanding of all its parts and to summarize the content of the 3 Jupiter scripts in a few minutes.
+***
+## Project_status
+***
+The project has been fully completed and the 3 Python scripts are perfectly working.
+***
+
+## Contributors
+***
+[Sabrina Cenghialta](https://github.com/CenghialtaSabrina)
+
+[Laura Romano](https://github.com/laur-py)
+
+[Matteo Serra](https://github.com/MrTeoTZR)
+***
+
+## FAQ
+***
+Here is a list of doubts that could arise after a careful project analysis:
+1. **There are five datasets available on Kaggle but the project analyzes only two of them. Why?**
+The decision to focus the analysis on the two files called "GlobalLandTemperatureByMajorCity" and "GlobalLandTemperatureByCountry" has been weighed and evaluated appropriately. The other three files have been discarded because the one named "GlobalLandTemperatureByCity" would have compromised the functionality of the NoSQL database for its dimension and therefore the entire mixture of Python and NoSQL languages, while the other two ("GlobalLandTemperatureByState" and "GlobalTemperature") do not contain useful data nor for analyze temperature variations in cities around the world, nor to deepen the analysis focused on States.
+2. **Why have you decided to complete a statistical analysis in a project based purely on programming languages?**
+When a project starts using a dataset which contains hundreds of thousands of data, it is essential to perform a careful analysis on the dataset itself in order to avoid using incorrect data or coming to wrong conclusions dictated by a lack of data in a specific detail.
+3. **The graph showing world temperatures over time always contains gray States. What's the reason?**
+Essentially, the graph has been implemented to make the DataFrame about the "GlobalLandTemperatureByCountry" dataset more enjoyable and more readable. There are some discrepancies with reality but it is not possible to do anything to avoid them, also considering the statements of the creator of the dataset itself:
+    1) Alaska's temperature was considered equal to the one of the other 49 States of the USA federation
+    2) about some States (mainly African) there are no data in the five files which compose the dataset: they are, on the map, blackened
+    3) over the centuries, the temperature measurement stations have been moved: this means that some variations may have been caused by this reason and not by real climate changes worthy of further studies.
 ***
