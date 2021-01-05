@@ -26,7 +26,7 @@ Il primo file .csv, è focalizzato sulle rilevazioni di temperatura nelle maggio
 
 Usando i dati contenuti nei suddetti dataset, il progetto parte dall'analisi statistica di tutte le rilevazioni, crea due collection contenenti i dati senza outliers e valori nulli, fornisce una visualizzazione grafica del variare delle temperature nel tempo (per una corretta visualizzazione, scaricare i file contenuti in questo [link]( https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip ) ) ed evidenzia le città in cui si sono registrate le maggiori escursioni termiche nei diversi periodi storici.
 
-Infine, il programma contiene un algoritmo creato per trovare il viaggio che un ipotetico viaggiatore dovrebbe intraprendere per spostarsi da Pechino a Los Angeles, muovendosi tappa dopo tappa verso la città più calda fra le tre a lui più vicine. Per chiarezza, i vari step del viaggio sono inseriti in un dataframe e poi mostrati in una mappa mondiale (dotata di uno slider che, permettendo di variare l'anno del viaggio, mostra anche direttamente sulla mappa il miglior percorso a seconda dell'anno scelto).
+Infine, il programma contiene un algoritmo creato per trovare il viaggio che un ipotetico viaggiatore dovrebbe intraprendere per spostarsi da Pechino a Los Angeles, muovendosi tappa dopo tappa verso la città più calda fra le tre a lui più vicine. 
 ***
 
 ## Installazione
@@ -79,27 +79,22 @@ Alternativamente, utilizzando l'Anaconda Poweshell prompt, i comandi da eseguire
 
 ## Descrizione
 ***
-Gli obiettivi del progetto sono stati:
+Gli obiettivi del progetto (composto da 3 diversi file Jupiter) sono stati:
 * una vista d'insieme sui cambiamenti delle temperature nel mondo, in diversi luoghi ed in diversi anni; 
 * l'analisi delle città con maggiore escursione termica nel tempo;
 * la costruzione del percorso da Pechino a Los Angeles.
 
-I file .csv che hanno permesso l'analisi sono stati dapprima scaricati dalla pagina di [Kaggle](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data) e poi caricati in un server creato appositamente su MongoDB, un DBMS non relazionale basato sul linguaggio NoSQL. Il database generato è stato così corredato di 2 collection: una basata sul file GlobalLandTemperaturesByCountry.csv e l'altra sul file GlobalLandTemperaturesByMajorCity.csv.
+La prima parte del progetto (inserita nel file "Exploration_Data") è iniziata dopo aver semplicemente scaricato dalla pagina di [Kaggle](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data) i dataset oggetto dell'intero progetto. In questo primo step, per poter essere agevolmente utilizzati con Python, i file .csv che racchiudevano i dataset sono stati trasformati in DataFrame utilizzando la libreria Pandas. Ciò ha permesso di giungere allo scopo di questa parte: l'analisi, dal punto di vista statistico, dei dati. Considerando che i dati climatici erano stati ottenuti con metodi di rilevazione diversi (basti considerare che le temperature più antiche riportate erano state calcolate tramite l'uso di arcaici termometri a mercurio) e considerando che gli autori dei dataset avevano sottolineato la presenza di possibili anomalie, la sudetta analisi è stata indispensabile per rendere più solido l'intero progetto. Per mantenere una facile comprensione dei vari comandi, si è ritenuto necessario illustrare i vari passaggi usando grafici boxplot ed istogrammi che mostrano visibilmente i cambiamenti effettuati sui dati tramite le varie formule statistiche. 
 
-Lo scopo di questa sovrastruttura è stato quello di avere un database che permettesse di eseguire query di ricerca direttamente dal programma scritto in Python, integrando armonicamente i due diversi linguaggi di programmazione.
+Dopo aver eliminato valori nulli ed outliers, i due DataFrame sono stati caricati in un server creato appositamente su MongoDB, un DBMS non relazionale basato sul linguaggio NoSQL. Il database generato è stato così corredato di 2 collection: una basata sul file GlobalLandTemperaturesByCountry.csv e l'altra sul file GlobalLandTemperaturesByMajorCity.csv. Lo scopo di questa sovrastruttura è stato quello di avere un database che permettesse di eseguire query di ricerca direttamente dal programma scritto in Python, integrando i due diversi linguaggi di programmazione ed ottimizzando le prestazioni degli script.
 
-La prima parte del progetto ha visto la messa in atto di una serie di semplici analisi atte a verificare la presenza di dati mancanti nel dataset di partenza.
+La seconda parte del progetto (inserita nel file "Graphic_Visualization_and_Analysis") è basata su più interessanti e coinvolgenti rappresentazioni grafiche delle variazioni di temperatura nel mondo, dal 1750 al 2013. Si è deciso di mostrare tutte le temperature disponibili nel dataset anche se, fino al 1880 circa, vi sono grosse carenze di informazioni e dati sicuramente meno attendibili. Termina questa parte proprio l'analisi delle città con maggiore escursione termica nei diversi periodi storici, con un grafico suggestivo basato su una cartina mondiale che mostra nomi ed ordine di grandezza della variazione.
 
-Considerando che i dati provenivano da metodi di rilevazione diversi (basti considerare che le temperature più antiche riportate erano state calcolate tramite l'uso di arcaici termometri a mercurio) e considerando che gli autori dei dataset avevano sottolineato la presenza di possibili anomalie, è stato necessario anche effettuare un'analisi prettamente statistica. L'analisi, corredata di grafici boxplot ed istogrammi, ha permesso di identificare e scartare i valori chiaramente affetti da bias (outliers), i quali altrimenti avrebbero reso fallace il resto del progetto.
-
-La seconda parte del progetto è stata basata su più interessanti e coinvolgenti rappresentazioni grafiche delle variazioni di temperatura nel mondo, dal 1900 al 2013. Si è deciso di focalizzarsi sulle sole temperature dell'ultimo secolo data la carenza di informazioni precedenti e data la maggior solidità delle rilevazioni novecentesche. Termina questa parte proprio l'analisi delle città con maggiore escursione termica nei diversi periodi storici, con un grafico suggestivo basato sulla cartina mondiale che ne mostra nomi ed ordine di grandezza della variazione.
-
-La terza ed ultima parte del progetto è composta da un lungo algoritmo, che considera tutti i dati contenuti nella collection MongoDB relativa alle temperature misurate nelle maggiori città mondiali e che permette di pianificare un vero viaggio. Nello specifico, il viaggio scelto inizia da Pechino (Cina) e termina a Los Angeles (USA), rispettando i seguenti criteri:
+La terza ed ultima parte del progetto (inserita nel file "Cold_Traveller") è composta da un lungo algoritmo, che considera tutti i dati contenuti nella collection MongoDB relativa alle temperature misurate nelle maggiori città mondiali e che permette di pianificare un vero viaggio. Nello specifico, il viaggio scelto inizia da Pechino (Cina) e termina a Los Angeles (USA), rispettando i seguenti criteri:
 * data la città di partenza, viene scelta la successiva tappa analizzando le 3 città più vicine alla città in cui ci si trova;
 * fra le 3 città più vicine, ci si sposta nella città con temperatura relativamente maggiore.
 
-Punto d'arrivo di questa terza parte finale è un grafico che dimostra anche, su una cartina mondiale, il viaggio che verrebbe intrapreso se si seguissero le varie tappe prescritte dal comando.
-
+Punto d'arrivo di questa terza parte finale è un grafico che dimostra anche, su una cartina mondiale, il viaggio che verrebbe intrapreso se si seguissero le varie tappe prescritte dal comando. Per chiarezza, i vari step del viaggio sono inseriti in un dataframe e poi mostrati nella suddetta mappa mondiale (dotata di uno slider che, permettendo di variare l'anno del viaggio, mostra anche direttamente sulla mappa il miglior percorso a seconda dell'anno scelto).
 ***
 ## Stato_del_progetto
 ***
