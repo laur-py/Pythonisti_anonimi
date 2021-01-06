@@ -99,7 +99,7 @@ Punto d'arrivo di questa terza parte finale è un grafico che dimostra anche, su
 ***
 ## Presentazione
 ***
-Il progetto è corredato di una presentazione multimediale (per visualizzarla clicca [qui](https://prezi.com/view/3WqkhqPQo5MsAmfh32bI/) creata tramite il software Prezi. Essa può servire per agevolarne la comprensione e per sintetizzare in pochi minuti il contenuto dei 3 script Jupiter.
+Il progetto è corredato di una presentazione multimediale (per visualizzarla clicca [qui](https://prezi.com/view/3WqkhqPQo5MsAmfh32bI/)) creata tramite il software Prezi. Essa può servire per agevolarne la comprensione e per sintetizzare in pochi minuti il contenuto dei 3 script Jupiter.
 ***
 ## Stato_del_progetto
 ***
